@@ -4,7 +4,7 @@ let searchBtn = document.getElementById("searchBtn");
 
 const getData = async (movie) =>{
    try{
-       let fetchData = await fetch(`https://www.omdbapi.com/?apikey=${APIKey}&t=${movie}`);
+       let fetchData = await fetch(`https://www.omdbapi.com/?apikey=${APIKey}&t=${movie}`,{referrerPolicy: "unsafe_url"});
    let jsonData = await fetchData.json();
 
    console.log(jsonData);
